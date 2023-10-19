@@ -1,0 +1,161 @@
+.checkout-app {
+   margin: 20px;
+   padding: 20px;
+   min-height: 100vh;
+}
+
+.checkout_logan {
+   padding: 60px 50px;
+   background-color: rgb(250, 250, 250);
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.checkout_logan-navbar {
+   color: rgb(200, 200, 200);
+
+}
+
+.checkout_logan-navbar-btn {
+   color: rgb(50, 50, 50);
+   border: none;
+   text-transform: uppercase;
+   background-color: rgb(250, 250, 250);
+}
+
+.checkout_logan-navbar-btn span {
+   color: rgb(200, 200, 200);
+   margin: 5px;
+}
+
+.checkout_logan-navbar-btn:hover {
+   cursor: pointer;
+}
+
+
+.checkout_billing {
+   padding: 50px 0;
+   display: flex;
+   gap: 20px
+}
+
+.checkout_billing-form {
+   flex: 6;
+}
+
+.checkout_billing-form form {
+   margin-top: 30px;
+}
+
+.checkout_billing-form-label {
+   text-transform: uppercase;
+   color: rgb(150, 150, 150);
+   margin: 15px 0 5px 0;
+}
+
+.checkout_billing-form-input {
+   padding: 10px;
+   color: rgb(100, 100, 100);
+   border: 2px solid rgb(200, 200, 200);
+   width: 100%;
+}
+
+.checkout_billing-form-error {
+   color: red;
+   display: block;
+}
+
+.checkout_billing-form-btn {
+   margin-top: 20px;
+   background-color: rgb(50, 50, 50);
+   color: rgb(200, 200, 200);
+   padding: 10px 18px;
+}
+
+.checkout_billing-form-btn:hover {
+   opacity: .7;
+}
+
+
+.checkout_billing-order {
+   flex: 5;
+   margin-top: 80px ;
+   padding: 40px 30px;
+   background-color: rgb(250, 250, 250);
+   align-items: center;
+}
+
+.checkout_billing-order-wait {
+   padding: 20px;
+   margin: 10px 0;
+}
+
+.checkout_billing-order-ordered {
+   padding: 20px 0 20px 20px;
+   border-bottom: 2px solid rgb(0, 100, 200);
+   margin: 10px 0;
+}
+
+.checkout_billing-order-title {
+   text-transform: uppercase;
+   margin: 20px 0;
+}
+
+.checkout_billing-order-wait-item {
+   padding: 15px 0;
+   border-bottom: 2px solid rgb(200, 200, 200);
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ .checkout_billing-order-wait-item-name {
+   margin-right: 10px;
+   display: inline-block;
+ }
+ 
+ .checkout_billing-order-wait-item-price {
+   color: rgb(150, 150, 150);
+   display: inline-block;
+   margin: 0 5px;
+   font-size: 1.1rem;
+ } 
+
+
+ .checkout_billing-order-ordered-item {
+   padding: 15px 0;
+   border-bottom: 2px solid rgb(200, 200, 200);
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ .checkout_billing-order-ordered-item-name {
+   margin-right: 10px;
+   display: inline-block;
+ }
+ 
+ .checkout_billing-order-ordered-item-price {
+   color: rgb(150, 150, 150);
+   display: inline-block;
+   margin: 0 5px;
+   font-size: 1.1rem;
+ } 
+
+
+
+.checkout_billing-total {
+   margin: 15px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+.checkout_billing-total-title {
+   text-transform: uppercase;
+   margin-right: 50px;
+}
+
+.checkout_billing-total-price {
+   color: rgb(50, 50, 50);
+   font-size: 1.5rem;
+}
+

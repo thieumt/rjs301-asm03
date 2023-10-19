@@ -1,0 +1,47 @@
+.shop_menu-app {
+  margin-right: 30px;
+  width: 220px;
+  font-style: italic;
+}
+
+.shop_menu-title {
+  margin: 20px 0;
+  color: rgb(50, 50, 50);
+}
+
+.menu_item {
+  width: 100%;
+}
+
+.menu_item .item-title {
+  background-color: rgb(240, 240, 240);
+}
+
+.menu_item .item-title {
+  padding: 10px 20px;
+}
+
+.menu_item .apple-title {
+  background-color: black;
+  color: rgb(240, 240, 240);
+}
+
+.menu_item .item-product {
+  padding: 10px 20px;
+  list-style-type: none;
+  color: rgb(150, 150, 150);
+  font-size: 1.3rem;
+  text-transform: initial;
+}
+
+.menu_item .item-product:hover,
+.menu_item .item-product:active {
+  color: #fd7e14;
+  background-color: rgb(250, 250, 250);
+  cursor: pointer;
+}
+
+.menu_item .click-active {
+  color: #fd7e14;
+  background-color: rgb(250, 250, 250);
+}

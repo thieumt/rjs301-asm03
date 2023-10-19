@@ -1,0 +1,45 @@
+.order_cp{
+   width: 600px;
+   margin: 80px auto;
+   padding: 30px 40px;
+   display: flex;
+   flex-direction: row;
+   gap: 20px
+}
+
+.order_cp-order{
+   margin-bottom: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 5px
+}
+
+.order_cp-order-item{
+   padding-left: 10px;
+}
+
+.order_cp-order-item-name{
+   margin-right: 15px;
+}
+
+.order_cp-order-item-price{
+   
+}
+
+.order_cp-order-item-price-value{
+   
+}
+
+.order_cp-total{
+   border-top: 2px solid rgb(100,100,100);
+}
+
+.order_cp-total-title{
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-right: 15px;
+}
+
+.order_cp-total-price{
+   font-size: 1.3rem;
+}

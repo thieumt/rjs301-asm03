@@ -1,0 +1,221 @@
+.cart-app {
+  margin: 20px;
+  padding: 20px
+}
+
+.cart-app .cart_title {
+   background-color: rgb(250, 250, 250);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 60px 50px;
+   text-transform: uppercase;
+}
+
+.cart-app .cart_title .cart-title-cart {
+   color:rgb(200, 200, 200);
+}
+
+.cart_shopping {
+   margin: 50px 0;
+}
+
+.cart_shopping .cart_shopping-title {
+   text-transform: uppercase;
+   margin:  0 0 20px;
+}
+
+.cart_table {
+   display: flex;
+   gap: 20px;
+   margin: 40px 0;
+   
+}
+
+.cart_table-content {
+   flex: 5;
+
+
+}
+
+.cart_table-content .table-product {
+   width: 100%;
+}
+
+.table-product table {
+   width: 100%;
+}
+
+.table-product table thead {
+   background-color: rgb(240, 240, 240);
+
+   
+}
+
+.table-product table thead tr {
+   text-transform: uppercase;
+   margin: 20px 0;
+   
+}
+
+.table-product table thead tr th {
+   padding: 20px;
+}
+
+.table-product table tbody tr {
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   height: 100px;
+}
+
+.table-product table tbody tr td {
+   padding: 5px
+}
+
+.table-product table tbody tr .cart-product-img {
+   width: 10%;
+   height: 70px;
+
+}
+
+.table-product table tbody tr .cart-product-name {
+   width: 30%;
+}
+
+.table-product table tbody tr .cart-product-price {
+   color: rgb(100, 100, 100);
+   width: 20%;
+}
+
+.table-product table tbody tr .cart-product-total {
+   color: rgb(100, 100, 100);
+   width: 20%;
+}
+
+.table-product table tbody tr .cart-product-remove {
+   width: 3%;
+}
+
+.table-product table tbody tr .cart-product-remove:hover {
+   background-color: red;
+   opacity: .4;
+}
+
+.table-product table tbody tr .cart-product-img .cart-product-img-select {
+   width: 100%;
+   height: 100%;
+}
+
+.table-product table tbody tr .cart-product-img .cart-product-img-select:hover {
+   opacity: .8;
+   cursor: pointer;
+   border: 1px solid rgb(200, 200, 200);
+   scale: 115%;
+   transition: 0.4s ease-in-out;
+}
+
+.table-product table tbody tr .cart-product-quantity-number{
+   margin: 0 10px;
+   font-size: 1.5rem;
+} 
+
+.table-product table tbody tr .cart-product-quantity .cart-product-quantity-minus {
+   color: rgb(50, 50, 50);
+   padding: 5px;
+}
+
+.cart-product-quantity-minus1 {
+   pointer-events: none;
+   opacity: 0.6;
+}
+ 
+
+.table-product table tbody tr .cart-product-quantity .cart-product-quantity-plus {
+   color: rgb(50, 50, 50);
+   padding: 5px;
+}
+
+.table-product table tbody tr .cart-product-quantity .cart-product-quantity-plus:hover,
+.table-product table tbody tr .cart-product-quantity .cart-product-quantity-minus:hover {
+   opacity: .7;
+   cursor: pointer;
+}
+.cart-btn-other {
+   display: flex;
+   justify-content: space-between;
+   background-color: rgb(240, 240, 240);
+   padding: 30px 20px;
+}
+
+.cart-btn-other .btn-view-continue {
+   border: none;
+   color: rgb(100, 100, 100);
+}
+
+.cart-btn-other .btn-view-proceed {
+   color: rgb(100, 100, 100);
+   padding: 10px;
+}
+
+.cart-btn-other .btn-view-proceed:hover, .cart-btn-other .btn-view-continue:hover {
+   opacity: .8;
+   cursor: pointer;
+}
+
+.cart-btn-other .cart-btn-view span {
+   margin: 0 10px;
+}
+
+
+
+.cart_total-product {
+   flex: 2;
+   padding: 40px 30px;
+   background-color: rgb(240, 240, 240);
+   
+}
+
+.cart_total-product .product-subtotal, 
+.cart_total-product .cart-product-price {
+   margin: 10px 0;
+   padding: 10px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+.cart_total-product .product-subtotal {
+   border-bottom: 2px solid rgb(150, 150, 150);
+}
+
+.cart_total-product .product-subtotal span,
+.cart_total-product .cart-product-price span {
+   display: inline-block;
+}
+
+.cart_total-product .product-subtotal .product-subtotal-total {
+   color: rgb(150, 150, 150);
+   
+   
+}
+
+.cart-product-form-input {
+   border: 1px solid rgb(200, 200, 200);
+   padding: 10px;
+   width: 100%;
+}
+
+.cart-product-form-btn {
+   width: 100%;
+   background-color:rgb(50, 50, 50);
+   color: rgb(250, 250, 250);
+   padding: 8px 0;
+}
+
+.cart-product-form-btn span {
+   margin: 0 10px;
+}
+
+.cart-product-form-btn:hover {
+   opacity: .8;
+}
