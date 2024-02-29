@@ -66,46 +66,46 @@ const ShopPage = ({ listitem, showItem, showItemAll }) => {
     }
   };
 
-  // const handleChangeOption = (e) => {
-  //   console.log('clik', e.target.value)
-  //   if (e.target.value === "default") {
-  //     console.log(dataListImg)
-  //     if (category) {
-  //        const filterDataItem = dataListImg.filter(
-  //       (product) => product.category === category
-  //       );
+  const handleChangeOption = (e) => {
+    console.log('click', e.target.value)
+    if (e.target.value === "default") {
+      console.log(dataListImg)
+      if (category) {
+         const filterDataItem = dataListImg.filter(
+        (product) => product.category === category
+        );
 
-  //     setDataListImg(filterDataItem);
-  //     } else {
-  //       setDataListImg(dataApi)
-  //     }
+      setDataListImg(filterDataItem);
+      } else {
+        setDataListImg(dataApi)
+      }
 
-  //   } else if (e.target.value === "high") {
-  //     console.log(dataListImg)
+    } else if (e.target.value === "high") {
+      console.log(dataListImg)
 
-  //     const sortProduct = dataListImg.sort((a, b) => {
-  //       if (typeof a.price === "number" && typeof b.price === "number") {
-  //         return parseFloat(b.price) - parseFloat(a.price);
-  //       } else {
-  //         return 1;
-  //       }
-  //     });
-  //           console.log(sortProduct)
+      const sortProduct = dataListImg.sort((a, b) => {
+        if (typeof a.price === "number" && typeof b.price === "number") {
+          return parseFloat(b.price) - parseFloat(a.price);
+        } else {
+          return 1;
+        }
+      });
+            console.log(sortProduct)
 
-  //     setDataListImg(sortProduct);
-  //   } else {
+      setDataListImg(sortProduct);
+    } else {
 
-  //     const sortProduct = dataListImg.sort((a, b) => {
-  //       if (typeof a.price === "number" && typeof b.price === "number") {
-  //         return parseFloat(a.price) - parseFloat(b.price);
-  //       } else {
-  //         return 1;
-  //       }
-  //     });
-  //     console.log(sortProduct)
-  //     setDataListImg(sortProduct);
-  //   }
-  // };
+      const sortProduct = dataListImg.sort((a, b) => {
+        if (typeof a.price === "number" && typeof b.price === "number") {
+          return parseFloat(a.price) - parseFloat(b.price);
+        } else {
+          return 1;
+        }
+      });
+      console.log(sortProduct)
+      setDataListImg(sortProduct);
+    }
+  };
 
   return (
     <div className="shop-app">
@@ -126,7 +126,7 @@ const ShopPage = ({ listitem, showItem, showItemAll }) => {
               />
               <select
                 className="product-form-select"
-                // onChange={handleChangeOption}
+                onChange={handleChangeOption}
               >
                 <option value="default">Default sorting</option>
                 <option value="high">Price: High to Low</option>

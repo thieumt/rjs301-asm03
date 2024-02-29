@@ -40,7 +40,18 @@ const RegisterPage = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setformData((prevState) => ({ ...prevState, [name]: value }));
+    if (name && value) {
+      for (const key in newErrors) {
+        if (key === name) {
+          newErrors[key] = "";
+        }
+      }
+      
+      setErrorInput(newErrors);
+      
+    }
   };
+
   //  change submit
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -159,7 +170,7 @@ const RegisterPage = () => {
               onChange={handleChange}
               value={formData.email}
             />
-            {errorInput.email && (
+            {!errorInput.username && errorInput.email && (
               <span className="form-error">{errorInput.email}</span>
             )}
             <input
@@ -170,7 +181,7 @@ const RegisterPage = () => {
               onChange={handleChange}
               value={formData.password}
             />
-            {errorInput.password && (
+            {!errorInput.username && !errorInput.email && errorInput.password && (
               <span className="form-error">{errorInput.password}</span>
             )}
             <input
@@ -181,7 +192,7 @@ const RegisterPage = () => {
               onChange={handleChange}
               value={formData.repassword}
             />
-            {errorInput.repassword && (
+            {!errorInput.username && !errorInput.email && !errorInput.password && errorInput.repassword && (
               <span className="form-error">{errorInput.repassword}</span>
             )}
             <input
@@ -192,7 +203,7 @@ const RegisterPage = () => {
               onChange={handleChange}
               value={formData.phone}
             />
-            {errorInput.phone && (
+            {!errorInput.username && !errorInput.email && !errorInput.password && !errorInput.repassword && errorInput.phone && (
               <span className="form-error">{errorInput.phone}</span>
             )}
 

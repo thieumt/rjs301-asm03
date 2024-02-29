@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { userName, isLoggedIn } = useSelector((state) => state.user);
 
-  const ref = useRef(userName);
+
   //   check localstorage
   useEffect(() => {
     const userLogin = localStorage.getItem("userLogin");
@@ -30,7 +30,7 @@ const Navbar = () => {
 
       dispatch(setUser(user));
     }
-  }, [ref.current]);
+  }, [userName, dispatch]);
 
   // change page
   const navigate = useNavigate();

@@ -3,7 +3,22 @@ import { useSelector } from "react-redux";
 import "./OrderPage.css";
 
 const OrderPage = () => {
-  const listOrder = JSON.parse(localStorage.getItem("listPlaceOrder")) || [];
+
+  const [listOrder, setListOrder] = useState([]);
+  useEffect(() => {
+    const listUpdate = JSON.parse(localStorage.getItem("listPlaceOrder")) || [];
+    setListOrder(listUpdate);
+
+    // Event change to localStorage
+    window.addEventListener("storage", () => {
+      const listUpdate = JSON.parse(localStorage.getItem("listPlaceOrder")) || [];
+      setListOrder(listUpdate);
+    });
+
+    // clean event
+    return () => window.removeEventListener("storage", () => {});
+  }, []);
+
   const userLogin = useSelector((state) => state.user.userEmail);
   const [placeOrder, setPlaceOrder] = useState([]);
 
@@ -12,10 +27,10 @@ const OrderPage = () => {
       const order = listOrder.filter((item) => {
         return item.email === userLogin;
       });
-       console.log(order)
+
       setPlaceOrder(order);
     }
-     }, [userLogin]);
+     }, [userLogin, listOrder]);
    
   const totalPricesOrdered = () => {
     let productPrice = 0;
@@ -28,9 +43,7 @@ const OrderPage = () => {
     return productPrice;
   };
 
-  console.log(listOrder);
-  console.log(userLogin);
-  console.log(placeOrder);
+
   // format price
   const formatPrice = (prices) => {
     if (typeof prices !== "undefined") {

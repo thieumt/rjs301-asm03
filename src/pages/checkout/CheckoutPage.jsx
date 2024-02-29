@@ -8,6 +8,7 @@ const CheckoutPage = () => {
   // state
   const [listCartUser, setListCartUser] = useState([]);
   const [infoUser, setInfoUser] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
 
   const [clickSubmit, setCLickSubmit] = useState(false);
 
@@ -167,6 +168,7 @@ const CheckoutPage = () => {
         if (!infoUser) {
           alert("Khong tim thay Email phu hop. Hay Dang nhap");
           valid = true;
+          setIsLogin(true)
         } else if (formData.phone === "") {
           valid = true;
           newErrors.phone = "Vui long nhap so dien thoai nhan hang";
@@ -251,6 +253,12 @@ const CheckoutPage = () => {
       address: "",
     });
   };
+  useEffect(() => {
+    if (isLogin) {
+      // Chuyển hướng đến trang login
+      window.location.href = "/login";
+    }
+  }, [isLogin]);
 
   return (
     <div className="checkout-app">

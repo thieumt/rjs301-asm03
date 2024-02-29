@@ -1,13 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showChatLive, hideChatLive } from "../../store/store";
 import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 import "./LiveChat.css";
-import { io } from "socket.io-client";
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+// import { io } from "socket.io-client";
+// const socket = io("http://localhost:5000", { transports: ["websocket"] });
 
 const LiveChat = () => {
   const [message, setMessage] = useState({
@@ -31,7 +30,6 @@ const LiveChat = () => {
       setErrorInput(false);
     }
   };
-console.log(messages)
   const sendMessage = (e) => {
     e.preventDefault();
 
@@ -50,7 +48,7 @@ console.log(messages)
         user: "kh",
       };
       setMessages((messages) => [...messages, data]);
-      socket.emit("message", { message: message.chat, user: "kh" });
+      // socket.emit("message", { message: message.chat, user: "kh" });
 
       setMessage({
         chat: "",
@@ -58,12 +56,12 @@ console.log(messages)
     }
   };
 
-  socket.on("receiver_message", (data) => {
-    setNewMess(true);
-    setTimeout(() => {
-      setMessages((messages) => [...messages, data]);
-    }, 1000);
-  });
+  // socket.on("receiver_message", (data) => {
+  //   setNewMess(true);
+  //   setTimeout(() => {
+  //     setMessages((messages) => [...messages, data]);
+  //   }, 1000);
+  // });
 
   useEffect(() => {
     setTimeout(() => {
@@ -99,7 +97,7 @@ console.log(messages)
                 messages.map((message, index) =>
                   message.user === "kh" ? (
                     <p key={index} className="chat_content-kh">
-                      You: 
+                      You:
                       {message.message}
                     </p>
                   ) : (

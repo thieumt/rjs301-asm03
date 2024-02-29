@@ -42,6 +42,7 @@ const Home = ({ isPopupState, showPopup, hidePopup }) => {
     const infoImg = e.target.id;
     const filteredData = dataApi.filter((img) => img._id.$oid === infoImg);
 
+    console.log(e)
     if (filteredData.length > 0) {
       setDataImg(filteredData[0]);
       if (!isPopupState) {
@@ -135,7 +136,7 @@ const Home = ({ isPopupState, showPopup, hidePopup }) => {
           <h2 className="product-title-2">top trending propducts</h2>
           <div className="product">
             {dataApi.map((img) => (
-              <div className="prouduct-item" key={img._id.$oid}>
+              <div className="product-item" key={img._id.$oid}>
                 <img
                   className="product-img"
                   id={img._id.$oid}
@@ -143,7 +144,7 @@ const Home = ({ isPopupState, showPopup, hidePopup }) => {
                   alt={img.name}
                   onClick={handleClickImg}
                 />
-                <h4 className="product-name">{img.name}</h4>
+                <h4 className="product-name" id={img._id.$oid} onClick={handleClickImg}>{img.name}</h4>
                 <h5 className="product-price">{formatPrice(img.price)} VND</h5>
               </div>
             ))}

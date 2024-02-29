@@ -38,7 +38,6 @@ const userSlice = createSlice({
   },
   reducers: {
     setUser: (state, action) => {
-      console.log(action.payload)
       state.userName = action.payload.name;
       state.userEmail = action.payload.email;
       state.isLoggedIn = true;

@@ -20,21 +20,31 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
+  const newErrors = { ...errorInput };
 
   // handle change input form
   const handleChange = (e) => {
     const { name, value } = e.target;
     setformData((prevState) => ({ ...prevState, [name]: value }));
+    if (name && value) {
+      for (const prop in newErrors) {
+        if (prop === name) {
+          newErrors[prop] = "";
+        }
+      }
+
+      setErrorInput(newErrors);
+    }
   };
 
   const dispatch = useDispatch();
-  // hanlde login
+  // handle login
   const handleLogin = () => {
     const userLogin = JSON.parse(localStorage.getItem("userLogin")) || "";
 
     const userName = {
       name: userLogin,
-      email: formData.email
+      email: formData.email,
     };
 
     dispatch(setUser(userName));
@@ -48,7 +58,6 @@ const LoginPage = () => {
     let user = "";
     let valid = false;
     let check = false;
-    const newErrors = { ...errorInput };
 
     const dataUsers = JSON.parse(localStorage.getItem("dataUsers")) || [];
     // handle valid input
@@ -144,7 +153,7 @@ const LoginPage = () => {
               onChange={handleChange}
               value={formData.password}
             />
-            {errorInput.password && (
+            {!errorInput.email && errorInput.password && (
               <span className="form-error">{errorInput.password}</span>
             )}
 

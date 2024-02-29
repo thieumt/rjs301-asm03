@@ -39,7 +39,7 @@ const ProductList = ({ dataListImg }) => {
               alt={img.name}
               onClick={() => navigateTo(`/detail/${img._id.$oid}`)}
             />
-            <h4 className="product-name">{img.name}</h4>
+            <h4 className="product-name" onClick={() => navigateTo(`/detail/${img._id.$oid}`)}>{img.name}</h4>
             <h5 className="product-price">{formatPrice(img.price)} VND</h5>
           </div>
         )) : <p>Khong tin thay du lieu</p>}
